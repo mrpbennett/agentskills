@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "username.pluginname",
+  "name": "Plugin Display Name",
+  "version": "0.1.0",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "bar-widget": "Widget.qml"
+  },
+  "barWidget": {
+    "name": "Plugin Display Name",
+    "category": "utility",
+    "defaultSection": "right",
+    "allowMultiple": false
+  }
+}

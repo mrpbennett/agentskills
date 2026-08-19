@@ -1,0 +1,59 @@
+<!--
+  Template for a third-party Omarchy shell plugin README.
+  Replace every <bracketed> placeholder, then delete this comment block.
+  Install/Update/Remove sections must keep the real `omarchy plugin ...`
+  commands with your actual repo URL and plugin id substituted in — see
+  https://omarchy.org/manual/shell-plugins/#adding-a-plugin-from-git
+-->
+
+# <Plugin Display Name>
+
+<One paragraph describing what the plugin does and why someone would want it.>
+
+<Screenshot or GIF here, only if you own the image or have permission to use it.>
+
+## Requirements
+
+- Omarchy with shell plugin support (`omarchy plugin --help` should work)
+- <any other prerequisites, e.g. an API key, a package the user must install first>
+
+## Install
+
+```bash
+omarchy plugin add https://github.com/<user>/<repo>.git --enable
+```
+
+Omarchy will show a trust warning before installing — plugins run as
+arbitrary, unsandboxed code inside the long-lived shell process, with
+everything your user account can reach. Review the source first. Installing
+clones this repo into `~/.config/omarchy/plugins/<username.pluginname>/`;
+it never runs an install hook and never asks for sudo.
+
+## Update
+
+```bash
+omarchy plugin update <username.pluginname>
+```
+
+## Remove
+
+```bash
+omarchy plugin remove <username.pluginname>
+```
+
+## Dependencies
+
+<List anything the plugin shells out to, any non-stdlib QML imports, and
+any network calls it makes and to what. If there are none, say so
+explicitly: "No external dependencies.">
+
+## License
+
+<Name the license, e.g. "MIT — see LICENSE.">
+
+## Configuration
+
+<If the plugin reads or writes any Omarchy config (e.g. shell.json), state
+exactly what and when. Any write outside this plugin's own directory must
+only happen as a result of an explicit user action — never silently on
+load.>
